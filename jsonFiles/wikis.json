@@ -1,0 +1,52 @@
+{
+        "group":{
+                "Fundamentos":{
+                        "Title":"Fundamentos",
+                        "QueSon":{
+                                "Title":"Que Son?",
+                                "Markdown":"wikis/Fundamentos/QueSon/Makedown"
+                        },
+                        "Variables":{
+                                "Title":"Variables",
+                                "Markdown":"wikis/Fundamentos/Variables/Makedown"
+                        },
+                        "TiposDeDatos":{
+                                "Title":"Tipos De Datos",
+                                "Markdown":"wikis/Fundamentos/TiposDeDatos/Makedown"
+                        },
+                        "Operadores":{
+                                "Title":"Operadores",
+                                "Markdown":"wikis/Fundamentos/Operadores/Makedown"
+                        },
+                        "condicionales":{
+                                "Title":"Condicionales",
+                                "Markdown":"wikis/Fundamentos/Condicionales/Makedown"
+                                
+                        },
+                        "commentarios":{
+                                "Title":"commentarios",
+                                "Markdown":"wikis/Fundamentos/comentarios/Makedown"
+                                
+                        },
+                        "Librerias":{
+                                "Title":"Librerias",
+                                "Markdown":"wikis/Fundamentos/Librerias/Makedown"
+                                
+                        },
+                        "Funciones":{
+                                "Title":"Funciones",
+                                "Markdown":"wikis/Fundamentos/Funciones/Makedown"
+                                
+                        }
+
+                },
+                "usodelsistema":{
+                        "Title":"Uso del sistema",
+                        "que vamos a ver?":{
+                                "Title":"que vamos a ver??",
+                                "Markdown":""
+                        }
+                }
+                
+        }
+}

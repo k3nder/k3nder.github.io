@@ -1,0 +1,23 @@
+{
+    "Proyects":{
+        "LT":{
+            "Title":"Launcher",
+            "Description":"Launcher of minecraft java",
+            "a":"Proyects/LT/",
+            "color":"#51c2ff"
+        },
+        "MCLCU":{
+            "Title":"MCLCU",
+            "Description":"laucher core",
+            "a":"https://github.com/kenderDev/Minecraft-Launcher-Core-Ultimate_MCLCU/tree/main",
+            "color":"#35434a"
+        },
+        "Wiki":{
+            "Title":"WIKI",
+            "Description":"WIKI for programers",
+            "a":"/wiki/",
+            "color":"#35434a"
+        }
+       
+    }
+}

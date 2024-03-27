@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Space invaders",
+        "description": "juego echo con java i processing una libreria de java, antes de jugarlo, recuerse sustituir el PATH en el archivo spaceinvaders.pde por el directoio donde se descargo el juego",
+        "image": "/project.images/project1.img.png",
+        "deploy": "https://github.com/k3nder/space-invaders-processing",
+        "repo": "https://github.com/k3nder/space-invaders-processing",
+        "tags": [
+            "java"
+        ]
+    }
+]

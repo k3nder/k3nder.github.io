@@ -1,0 +1,52 @@
+---
+
+---
+<button id="toggle">
+    <img id='icon' src="" alt="dark icon toggle">
+</button>
+<script>
+  const sun = '/icons/dark-light-toggle/sun-light.svg';
+  const moon = '/icons/dark-light-toggle/half-moon.svg';
+
+  const button = document.getElementById("toggle");
+  const icon = document.getElementById("icon");
+
+  function setIcon(iconn: string) {
+    icon?.setAttribute('src', iconn);
+  }
+
+  let light = true;
+  setIcon(moon);
+
+  button?.addEventListener('click', (event) => {
+    light = !light;
+    console.log(light);
+    if (light) {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+      setIcon(moon);
+    } else {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+      setIcon(sun);
+    }
+  });
+
+</script>
+<style>
+button {
+    background: transparent;
+    border: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 12rem 1.7rem 0;
+    width: 3rem;
+    height: 3rem;
+
+}
+img {
+ width: 3rem;
+ height: 3rem;
+}
+</style>

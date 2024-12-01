@@ -1,0 +1,26 @@
+---
+interface Link {
+  display: string,
+  goto: string
+}
+
+const link: Link[] = [
+  {
+    display: 'About me',
+    goto: 'goto-about-me'
+  }
+]
+
+---
+<ul>
+ {
+  link.map((item) => {
+    <li><a href={`#${item.goto}`} >{item.display}</a></li>
+  })
+ }
+</ul>
+<style>
+a {
+    scroll-behavior: smooth;
+}
+</style>

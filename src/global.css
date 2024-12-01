@@ -1,0 +1,32 @@
+.dark {
+  --color-primary: #1e1e1e;
+  --color-text: #f6f7eb;
+  --color-detail: #e54b4b;
+  --color-sucess: #20bf55;
+  --color-secondary: #ffffff;
+  --color-blue: #3f88c5;
+  --svg-invert: 1;
+}
+.light {
+  --color-primary: #f6f7eb;
+  --color-text: #000000;
+  --color-detail: #e54b4b;
+  --color-sucess: #20bf55;
+  --color-secondary: #000000;
+  --color-blue: #3f88c5;
+  --svg-invert: 0;
+}
+
+body {
+  background: var(--color-primary);
+  font-family: "JetBrains Mono", nomospace;
+}
+h1 {
+  color: var(--color-detail);
+}
+p {
+  color: var(--color-text);
+}
+img[src$=".svg"] {
+  filter: invert(var(--svg-invert));
+}

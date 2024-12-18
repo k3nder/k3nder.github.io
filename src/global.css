@@ -1,0 +1,16 @@
+dark {
+    --color-background: #01161e;
+    --color-text: #ffffff;
+}
+
+light {
+    --color-background: #ffffff;
+    --color-text: #000000;
+}
+
+:root {
+    --color-title: #f08c00;
+    --color-success: #20bf55;
+    --color-detail: #e54b4b;
+    --color-button: #1971c2;
+}

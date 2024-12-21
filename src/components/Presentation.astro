@@ -1,0 +1,26 @@
+---
+import "../global.css";
+
+interface Props {
+    name: string;
+    description: string;
+}
+const { name, description } = Astro.props;
+---
+<section>
+ <h3>{name}</h3>
+<sub>{description}</sub>
+
+<style>
+    h3 {
+        color: var(--color-detail);
+        margin: 0;
+        font-size: 2rem; 
+    }
+
+    sub {
+        font-size: 0.9rem;
+    }
+</style>
+   
+</section>

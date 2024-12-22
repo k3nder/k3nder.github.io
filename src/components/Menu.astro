@@ -1,0 +1,90 @@
+---
+import "../global.css"
+
+interface Link {
+    display: string,
+    goto: string
+}
+interface Props {
+    links: Link[]
+}
+
+const { links } = Astro.props;
+---
+<menu>
+    <ul>
+        {
+            links.map((link) => {
+                const goto: string = `#${link.goto}`
+                return <li><a href={goto} >{link.display}</a></li>;
+            })
+        }    
+    </ul>
+    <p>LL</p>
+</menu>
+
+<style>
+    menu {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        right: 0;
+        width: 15rem;
+        height: 60%;
+        transform: translate(0, -50%) translateX(15rem);
+        backdrop-filter: blur(10px); /* Nivel de desenfoque */
+        background-color: rgba(136, 120, 120, 0.2); /* Fondo semitransparente */
+        transition: all ease-in-out 0.3s;
+    }
+    menu p {
+        display: none;
+    }
+    ul {
+        margin-right: 50px;
+    }
+    menu:hover {
+        transform: translate(0, -50%) translateX(-0.1rem);
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: var(--color-text);
+        transition: all ease-in-out 0.3s;
+        font-size: 1.4rem;
+    }
+    a:hover {
+        color: var(--color-text-hover);
+    }
+    @media (max-width: 600px) {
+        menu {
+            background: transparent;
+            transform: translateX(15rem);
+            top: 0;
+        }
+        menu ul {
+            display: none;
+        }
+        menu p {
+            display: inline;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            margin-right: 300px;
+            color: wheat;
+        }
+        menu:hover {
+            background: rgba(136, 120, 120, 0.2);
+            transform: translateX(-0.1rem);
+        }
+        menu:hover p {
+            display: none;
+        }
+        menu:hover ul {
+            display: block;
+        }
+    }
+</style>

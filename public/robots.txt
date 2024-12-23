@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.k3nder.vercel.app/sitemap.xml

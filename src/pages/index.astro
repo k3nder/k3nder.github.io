@@ -1,34 +1,61 @@
 ---
-import CvButton from '../components/CvButton.astro';
+import CvButton from '../components/menu/CvButton.astro';
 import Presentation from '../components/Presentation.astro';
 import Layout from '../layouts/Layout.astro';
-import Menu from '../components/Menu.astro';
-
-import "../global.css"
-
+import Menu from '../components/menu/Menu.astro';
+import LinkedTitle from '../components/LinkedTitle.astro';
+import AboutMeSection from '../sections/AboutMeSection.astro';
+import ProjectsSection from '../sections/ProjectsSection.astro';
+import CertificationsSection from '../sections/CertificationsSection.astro';
+import HabilitiesSection from '../sections/HabilitiesSection.astro';
+import Blog from '../components/Blog.astro';
+import BlogSection from '../sections/BlogSection.astro';
+import ThemeSwith from '../components/ThemeSwith.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title='title' language='en'>
     <Menu links={[
-    {
-        display: 'mimi',
-        goto: 'gafa'
-    },
-    {
-        display: 'mimi',
-        goto: 'gafa'
-    },
-    {
-        display: 'mimi',
-        goto: 'gafa'
-    },
-    {
-        display: 'mimi',
-        goto: 'gafa'
-    }
-]} />
-<CvButton url='' />
-<Presentation name='Your name' description='Desc' />
+        {
+            display: 'About Me',
+            goto: 'about-me'
+        },
+        {
+            display: 'Projects',
+            goto: 'projects'
+        },
+        {
+            display: 'Certifications',
+            goto: 'certifications'
+        },
+        {
+            display: 'Habilies',
+            goto: 'habilities'
+        },
+        {
+            display: 'Blog',
+            goto: 'Blog'
+        },
+        {
+            display: 'Contact Me',
+            goto: 'contact-me'
+        }
+        ]} />
+    <CvButton url='' />
+    <ThemeSwith />
+    
+    <AboutMeSection />
+    <ProjectsSection />
+    <CertificationsSection />
+    <HabilitiesSection />
+    <BlogSection />
 </Layout>
+
+<style>
+    br {
+        height: 1000px;
+        color: rebeccapurple;
+        background-color: rebeccapurple;
+    }
+</style>

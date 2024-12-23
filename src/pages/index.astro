@@ -1,11 +1,34 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import CvButton from '../components/CvButton.astro';
+import Presentation from '../components/Presentation.astro';
 import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+
+import "../global.css"
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-"
-<Layout language="en" title="Kristian Portfolio">
-	
+
+<Layout title='title' language='en'>
+    <Menu links={[
+    {
+        display: 'mimi',
+        goto: 'gafa'
+    },
+    {
+        display: 'mimi',
+        goto: 'gafa'
+    },
+    {
+        display: 'mimi',
+        goto: 'gafa'
+    },
+    {
+        display: 'mimi',
+        goto: 'gafa'
+    }
+]} />
+<CvButton url='' />
+<Presentation name='Your name' description='Desc' />
 </Layout>

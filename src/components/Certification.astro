@@ -1,0 +1,57 @@
+---
+interface Props {
+    title: string,
+    academy: string,
+    certification: string
+}
+
+const {title, academy, certification} = Astro.props;
+---
+
+<span class="certification" >
+    <h3 class="certification-title" >{title}</h3>
+    <p class="certification-academy" >{academy}</p>
+    <span class="certification-cert" >
+        <img class="certification-cert-img" src={certification} alt="Certification">
+    </span>
+</span>
+
+<style>
+    .certification {
+        position: relative;
+        display: flex;
+        border: 2px solid var(--color-text);
+        border-radius: 1rem;
+        height: 50px;
+        align-items: center;
+        max-width: 50rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    .certification-title {
+        position: absolute;
+        color: var(--color-detail);
+        left: 0;
+        margin-left: 10px;
+    }
+    .certification-academy {
+        color: var(--color-success);
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
+    }
+    .certification:hover .certification-cert {
+        display: block;
+    }
+    .certification-cert {
+        display: none; 
+        position: absolute;
+        margin-top: 14rem;
+        z-index: 10;
+    }
+    .certification-cert-img {
+        width: 35%;
+        height: 30%;
+    }
+</style>

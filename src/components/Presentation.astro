@@ -8,20 +8,20 @@ interface Props {
 const { name, description } = Astro.props;
 ---
 <section>
-    <h3>{name}</h3>
+    <h3 id="about-me" >{name}</h3>
     <sub>{description}</sub>
 </section>
 <style>
     section {
-        margin: 10% 15%;
+        margin: 10% 15% 5%;
     }
     h3 {
         color: var(--color-detail);
         margin: 0;
-        font-size: 2rem; 
+        font-size: 3rem; 
     }
     sub {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         color: var(--color-text);
     }
 </style>

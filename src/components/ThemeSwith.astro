@@ -1,0 +1,46 @@
+<button id="theme-toggle" >
+    <img id="theme-toggle-icon" src="" alt="icon">
+</button>
+
+<script>
+    const c = "/sun-light.svg"
+              , o = "/half-moon.svg"
+              , s = document.getElementById("theme-toggle")
+              , l = document.getElementById("theme-toggle-icon");
+            function set(n: string) {
+                l?.setAttribute("src", n)
+            }
+
+            
+
+            let t = !0;
+            set(o);
+            s?.addEventListener("click", n => {
+                t = !t,
+                console.log(t),
+                t ? (document.documentElement.classList.remove("dark"),
+                document.documentElement.classList.add("light"),
+                set(o)) : (document.documentElement.classList.remove("light"),
+                document.documentElement.classList.add("dark"),
+                set(c))
+            }
+            );
+</script>
+
+<style>
+    img {
+        filter: invert(var(--svg-invert));
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    button {
+        background: transparent;
+        border: 0px solid transparent;
+        position: fixed;
+        z-index: 10;
+        bottom: 0;
+        left: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+</style>

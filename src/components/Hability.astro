@@ -1,0 +1,48 @@
+---
+interface Props {
+    title: string,
+    value: string
+}
+
+const {title, value} = Astro.props;
+---
+
+<span class="hability" >
+    <h3 class="hability-title" >{title}</h3>
+    <progress class="hability-progress" max="100" value={value}>{value}%</progress>
+</span>
+
+<style>
+    .hability {
+        display: flex;
+        border: 2px solid var(--color-text);
+        border-radius: 0.6rem;
+        align-items: center;
+        height: 2.3rem;
+        max-width: 40rem;
+        margin-bottom: 10px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .hability-title {
+        color: var(--color-text);
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .hability-progress {
+        height: 2rem;
+        border-radius: 0.6rem;
+        width: 89%;
+        overflow: hidden;
+        border: 2px solid var(--color-text);
+    }
+    progress::-webkit-progress-bar {
+        background-color: var(--color-text-hover); /* Fondo de la barra */
+        border-radius: 10px; /* Esquinas del contenedor */
+    }   
+
+    progress::-webkit-progress-value {
+        background-color: var(--color-success); /* Color del progreso */
+        border-radius: 10px; /* Esquinas del relleno */
+    }
+</style>

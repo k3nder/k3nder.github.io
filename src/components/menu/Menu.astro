@@ -1,6 +1,4 @@
 ---
-import "../global.css"
-
 interface Link {
     display: string,
     goto: string
@@ -20,7 +18,7 @@ const { links } = Astro.props;
             })
         }    
     </ul>
-    <p>LL</p>
+    <p> <img src="/menu.svg" alt="MENU"> </p>
 </menu>
 
 <style>
@@ -37,9 +35,13 @@ const { links } = Astro.props;
         backdrop-filter: blur(10px); /* Nivel de desenfoque */
         background-color: rgba(136, 120, 120, 0.2); /* Fondo semitransparente */
         transition: all ease-in-out 0.3s;
+        z-index: 20;
     }
     menu p {
         display: none;
+    }
+    menu p img {
+        filter: invert(var(--svg-invert));
     }
     ul {
         margin-right: 50px;
@@ -62,9 +64,11 @@ const { links } = Astro.props;
     @media (max-width: 600px) {
         menu {
             background: transparent;
+            backdrop-filter: blur(0);
             transform: translateX(15rem);
             top: 0;
             margin-right: 10px;
+            height: 10px;
         }
         menu ul {
             display: none;
@@ -78,8 +82,10 @@ const { links } = Astro.props;
             color: wheat;
         }
         menu:hover {
+            backdrop-filter: blur(10px);
             background: rgba(136, 120, 120, 0.2);
             transform: translateX(-0.1rem);
+            height: 60%;
         }
         menu:hover p {
             display: none;

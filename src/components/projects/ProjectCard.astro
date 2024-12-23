@@ -1,0 +1,90 @@
+---
+interface Props {
+    name: string,
+    description: string,
+    hrefSource: string,
+    hrefView?: string,
+    image: string
+}
+const {name, description, hrefSource, hrefView, image} = Astro.props;
+
+---
+
+<span class="project" >
+    <img class="project-image" src={image} alt="preview">
+    <section>
+        <h3>{name}</h3>
+        <p class="project-description" >{description}</p>
+    </section>
+    <section class="project-buttons" >
+        <a class="project-buttons-btn btn-source" href={hrefSource}> <img class="project-buttons-btn-icon" src="/code.svg" alt=""> </a>
+        <br>
+        <br>
+        <a class="project-buttons-btn btn-view" href={hrefView}> <img class="project-buttons-btn-icon" src="/www.svg" alt=""> </a>
+    </section>
+</span>
+
+<style>
+    .project {
+        position: relative;
+        display: flex;
+        background-color: transparent;
+        padding: 5px 10px 5px 10px;
+        width: 28rem;
+        border-radius: 1rem;
+        border: 2px solid var(--color-text);
+        margin-right: 10px;
+        transition: all ease-in-out 0.3s;
+        color: var(--color-text);
+    }
+    .project:hover {
+        transform: scale(1.05);
+        background-color: var(--color-button);
+    } 
+    .project-image {
+        width: 156px;
+        border-radius: 1rem;
+        margin-right: 10px;
+    }
+    .project-description {
+        width: 90%;
+    }
+    .project-buttons {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        justify-content: center;
+    }
+    .project-buttons-btn {
+        margin-left: auto;
+        filter: invert(var(--svg-invert));
+    }
+    .project-buttons-btn:hover {
+        transform: scale(1.2);
+    }
+    /* Dispositivos pequeños (móviles) */
+@media (max-width: 600px) {
+    .project {
+        width: 23rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+    }
+}
+
+/* Dispositivos medianos (tabletas) */
+@media (min-width: 601px) and (max-width: 800px) {
+    .project {
+        width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+    }
+}
+
+</style>

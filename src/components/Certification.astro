@@ -8,9 +8,9 @@ interface Props {
 const {title, academy, certification} = Astro.props;
 ---
 
-<span class="certification" >
-    <h3 class="certification-title" >{title}</h3>
-    <p class="certification-academy" >{academy}</p>
+<span class="certification transition-hover" >
+    <h3 class="certification-title font-jetbrains" >{title}</h3>
+    <p class="certification-academy font-jetbrains" >{academy}</p>
     <span class="certification-cert" >
         <img class="certification-cert-img" src={certification} alt="Certification">
     </span>

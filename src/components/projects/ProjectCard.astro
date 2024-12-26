@@ -13,14 +13,14 @@ const {name, description, hrefSource, hrefView, image} = Astro.props;
 <span class="project" >
     <img class="project-image" src={image} alt="preview">
     <section>
-        <h3>{name}</h3>
-        <p class="project-description" >{description}</p>
+        <h3 class="font-jetbrains">{name}</h3>
+        <p class="project-description font-jetbrains" >{description}</p>
     </section>
     <section class="project-buttons" >
-        <a class="project-buttons-btn btn-source" href={hrefSource}> <img class="project-buttons-btn-icon" src="/code.svg" alt=""> </a>
+        <a class="project-buttons-btn btn-source font-jetbrains" href={hrefSource}> <img class="project-buttons-btn-icon" src="/code.svg" alt=""> </a>
         <br>
         <br>
-        <a class="project-buttons-btn btn-view" href={hrefView}> <img class="project-buttons-btn-icon" src="/www.svg" alt=""> </a>
+        <a class="project-buttons-btn btn-view font-jetbrains" href={hrefView}> <img class="project-buttons-btn-icon" src="/www.svg" alt=""> </a>
     </section>
 </span>
 

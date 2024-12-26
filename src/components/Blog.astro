@@ -9,9 +9,9 @@ const {blog, title, author} = Astro.props;
 ---
 
 <a href={`/blogs/${blog}`}>
-    <span class="blog" > 
-        <h3 class="blog-title" >{title}</h3>
-        <p class="blog-author" >by {author}</p>
+    <span class="blog transition-hover" > 
+        <h3 class="blog-title font-jetbrains" >{title}</h3>
+        <p class="blog-author font-jetbrains" >by {author}</p>
     </span>
 </a>
 <style>

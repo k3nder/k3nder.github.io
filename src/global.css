@@ -19,7 +19,7 @@
     --color-button: #1971c2;
 }
 
-p,h1,h2,h3,h4,h5,h6,sub,a {
+.font-jetbrains {
   font-family: "JetBrains Mono", serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -27,4 +27,12 @@ p,h1,h2,h3,h4,h5,h6,sub,a {
 
 .section {
     margin-top: 20rem;
+}
+
+.transition-hover {
+    transition: all ease-in-out 0.3s;
+}
+.transition-hover:hover {
+    transform: scale(1.05);
+    background-color: var(--color-button);
 }

@@ -1,19 +1,27 @@
 ---
 import ProjectCard from "../components/projects/ProjectCard.astro"
 import LinkedTitle from "../components/LinkedTitle.astro"
+
+const profile = import.meta.glob("../data/profile.config.json", { eager: true })
+let data
+for (const path in profile) {
+  data = profile[path];
+}
 ---
 
-<section class="section" >
-    <LinkedTitle id="projects" >Latest Projects</LinkedTitle>
-    <section class="project-group" >
-        <ProjectCard name="My latest project" description="A simple latest project" hrefSource="source" hrefView="view" image="" />   
-        <ProjectCard name="My latest project" description="A simple latest project" hrefSource="source" hrefView="view" image="" />    
-    </section>
-    <LinkedTitle id="">Projects</LinkedTitle>
-    <section class="project-group" >
-        <ProjectCard name="My latest project" description="A simple latest project" hrefSource="source" hrefView="view" image="" />    
-        <ProjectCard name="My latest project" description="A simple latest project" hrefSource="source" hrefView="view" image="" />    
-    </section>
+<section class="section" id="projects" >
+    {
+        data.projects.map((projectGroup) => {
+            return ( <LinkedTitle id="">{projectGroup.title}</LinkedTitle>
+            <section class="project-group" >
+                {
+                    projectGroup.projects.map((project) => {
+                        return <ProjectCard name={project.title} description={project.description} hrefSource={project.source} hrefView={project.view} image={project.preview} />    
+                    })
+                }
+            </section> )
+        })
+    }
 </section>
 
 <style>

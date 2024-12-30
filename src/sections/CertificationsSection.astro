@@ -1,15 +1,21 @@
 ---
 import Certification from "../components/Certification.astro";
 import LinkedTitle from "../components/LinkedTitle.astro";
+const profile = import.meta.glob("../data/profile.config.json", { eager: true })
+let data
+for (const path in profile) {
+  data = profile[path];
+}
 ---
 
 <section class="section" >
     <LinkedTitle id="certifications">Certifications</LinkedTitle>
     <section class="certifications-group" > 
-        <Certification title="Java" academy="W3 Schools" certification="" />
-        <Certification title="Java" academy="W3 Schools" certification="" />
-        <Certification title="Java" academy="W3 Schools" certification="" />
-        <Certification title="Java" academy="W3 Schools" certification="" />
+        {
+            data.certifications.map((certification) => {
+                return <Certification title={certification.subject} academy={certification.academy} certification={certification.view} />
+            })
+        }
     </section>
 </section>
 

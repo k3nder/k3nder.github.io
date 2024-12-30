@@ -1,16 +1,20 @@
 ---
 import Blog from "../components/Blog.astro";
 import LinkedTitle from "../components/LinkedTitle.astro";
+import { getCollection } from "astro:content";
+
+const posts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: true }))
 
 ---
 
 <section class="section" >
     <LinkedTitle id="blog" >Blog</LinkedTitle>
     <div class="blogs" > 
-        <Blog title="First blog" author="K3nder" blog="blog" />
-        <Blog title="First blog" author="K3nder" blog="blog" />
-        <Blog title="First blog" author="K3nder" blog="blog" />
-        <Blog title="First blog" author="K3nder" blog="blog" />
+        {
+            posts.map((post) => (
+                <Blog title={post.frontmatter.title} author={post.frontmatter.author} blog={post.url}  />
+            ))
+        }
     </div>
 </section>
 

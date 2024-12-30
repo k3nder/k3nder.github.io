@@ -2,8 +2,17 @@
 import Hability from "../components/Hability.astro";
 import LinkedTitle from "../components/LinkedTitle.astro";
 
+const profile = import.meta.glob("../data/profile.config.json", { eager: true })
+let data
+for (const path in profile) {
+  data = profile[path];
+}
 ---
 <section class="section" >
     <LinkedTitle id="habilities">Habilities</LinkedTitle>
-    <Hability title="Java" value="100" />
+    {
+        data.habilities.map((hability) => {
+            return <Hability title={hability.subject} value={hability.value} />
+        })
+    }
 </section>

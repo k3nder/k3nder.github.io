@@ -1,0 +1,36 @@
+{
+    "name": "Kristian",
+    "description": "Full stack | Rust | Java | Astro | Angular",
+    "cv": "",
+    "email": "",
+    "phone": "",
+    "github": "",
+    "x": "",
+    "projects": [
+        {
+            "title": "Latest Projects",
+            "projects": [
+                {
+                    "title": "Simple Coffe Listing",
+                    "preview": "https://i.ibb.co/KhtJLt6/screencapture-simple-coffe-listing-seven-vercel-app-2024-12-30-16-20-17.png",
+                    "description": "A simple latest project using AngularJS",
+                    "source": "https://github.com",
+                    "view": "https://simple-coffe-listing-seven.vercel.app/"   
+                }
+            ]
+        }
+    ],
+    "certifications": [
+        {
+            "subject": "Java",
+            "academy": "W3 Schools",
+            "view": "url"
+        }
+    ],
+    "habilities": [
+        {
+            "subject": "Java",
+            "value": "70"
+        }
+    ]
+}
